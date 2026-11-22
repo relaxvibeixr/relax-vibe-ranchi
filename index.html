@@ -1,1 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relax Vibe | Home Massage Services in Ranchi</title>
+<meta name="description" content="Relax Vibe offers professional home wellness and relaxation massage services in Ranchi.">
+<style>
+:root {
+  --green:#102c23;
+  --deep:#091b15;
+  --gold:#d6b66b;
+  --cream:#f5f0e5;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+ font-family:Arial,sans-serif;
+ background:var(--deep);
+ color:var(--cream);
+ line-height:1.6;
+}
+header{
+ display:flex;align-items:center;justify-content:space-between;
+ padding:14px 7%;background:var(--green);
+ position:sticky;top:0;z-index:5;
+ border-bottom:1px solid #b99b57;
+}
+.logo{width:65px;height:65px;object-fit:contain}
+nav a{color:var(--cream);text-decoration:none;margin-left:20px;font-size:14px}
+.hero{
+ min-height:520px;padding:75px 8%;
+ display:flex;align-items:center;justify-content:center;
+ text-align:center;
+ background:linear-gradient(#091b15d9,#091b15e8),
+ url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1600') center/cover;
+}
+.hero h1{font-size:clamp(34px,6vw,58px);color:var(--gold);line-height:1.15}
+.hero p{margin:20px auto;max-width:550px;color:#eee}
+.btn{
+ display:inline-block;background:var(--gold);color:#10251c;
+ border:0;padding:13px 24px;border-radius:5px;
+ font-weight:bold;text-decoration:none;cursor:pointer;
+}
+section{padding:65px 8%;text-align:center}
+h2{font-size:32px;color:var(--gold);margin-bottom:15px}
+.subtitle{color:#c9c4b7;margin-bottom:35px}
+.services{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+ gap:22px;text-align:left;
+}
+.card{
+ background:var(--green);border:1px solid #806c43;
+ border-radius:12px;padding:24px;
+}
+.card h3{color:var(--gold);margin-bottom:12px}
+.price{font-size:25px;color:var(--gold);margin:15px 0}
+.card p{color:#d4d0c5}
+.prices{max-width:650px;margin:auto;background:var(--green);padding:22px;border-radius:12px}
+.price-row{
+ display:flex;justify-content:space-between;
+ padding:14px 5px;border-bottom:1px solid #526057;
+}
+.features{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+ gap:15px;margin-top:25px;
+}
+.feature{padding:20px;background:var(--green);border-radius:9px}
+.feature strong{color:var(--gold)}
+.area{color:#ddd}
+.faq{text-align:left;max-width:700px;margin:12px auto;padding:18px;background:var(--green);border-radius:8px}
+.faq h3{color:var(--gold);font-size:17px}
+footer{
+ background:#07140f;text-align:center;padding:35px 15px;
+ color:#c8c1ae;border-top:1px solid #806c43;
+}
+footer p{margin:8px}
+footer a{color:var(--gold)}
+.modal{
+ display:none;position:fixed;inset:0;background:#000c;
+ z-index:10;overflow:auto;padding:20px;
+}
+.modal-box{
+ background:var(--green);max-width:550px;margin:30px auto;
+ padding:25px;border:1px solid var(--gold);border-radius:12px;
+}
+.modal-box h2{font-size:26px}
+.close{float:right;color:var(--gold);font-size:27px;cursor:pointer}
+input,select,textarea{
+ width:100%;padding:12px;margin:8px 0 15px;
+ border:1px solid #a18a58;border-radius:5px;
+ background:#f8f5ed;color:#18251e;font-size:15px;
+}
+label{display:block;text-align:left;font-size:14px}
+.policy{text-align:left;font-size:13px;margin:10px 0 18px}
+@media(max-width:600px){
+ header{padding:10px 4%}
+ nav a{margin-left:9px;font-size:12px}
+ .logo{width:48px;height:48px}
+ section{padding:50px 6%}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <img src="logo.png" class="logo" alt="Relax Vibe Logo">
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#contact">Contact</a>
+ </nav>
+</header>
+
+<div class="hero" id="home">
+ <div>
+  <h1>Premium Home Massage Services in Ranchi</h1>
+  <p>Relax Your Body, Refresh Your Mind.</p>
+  <p>Professional wellness and relaxation services at your home in Ranchi.</p>
+  <button class="btn" onclick="openBooking()">Book Appointment</button>
+ </div>
+</div>
+
+<section id="services">
+ <h2>Our Services</h2>
+ <p class="subtitle">Choose your preferred relaxation service.</p>
+ <div class="services">
+  <div class="card">
+   <h3>Relaxing Full Body Massage</h3>
+   <p>A relaxing wellness session designed to support comfort and relaxation.</p>
+   <div class="price">From ₹799</div>
+   <button class="btn" onclick="openBooking('Relaxing Full Body Massage')">Book Now</button>
+  </div>
+  <div class="card">
+   <h3>Normal Body Massage</h3>
+   <p>A general relaxation massage session by an experienced spa therapist.</p>
+   <div class="price">From ₹799</div>
+   <button class="btn" onclick="openBooking('Normal Body Massage')">Book Now</button>
+  </div>
+ </div>
+</section>
+
+<section id="pricing">
+ <h2>Our Pricing</h2>
+ <p class="subtitle">Transparent pricing. No home visit charges.</p>
+ <div class="prices">
+  <div class="price-row"><span>60 Minutes</span><strong>₹799</strong></div>
+  <div class="price-row"><span>90 Minutes</span><strong>₹999</strong></div>
+  <div class="price-row"><span>120 Minutes</span><strong>₹1,499</strong></div>
+ </div>
+</section>
+
+<section>
+ <h2>Why Choose Relax Vibe?</h2>
+ <div class="features">
+  <div class="feature"><strong>01</strong><p>Home Service in Ranchi</p></div>
+  <div class="feature"><strong>02</strong><p>One Year Therapist Experience</p></div>
+  <div class="feature"><strong>03</strong><p>Free Home Visit</p></div>
+  <div class="feature"><strong>04</strong><p>Cash & UPI Payment</p></div>
+ </div>
+</section>
+
+<section>
+ <h2>Service Area</h2>
+ <p class="area">Home wellness services across Ranchi, Jharkhand.</p>
+ <p class="area">Available by appointment only.</p>
+</section>
+
+<section id="faq">
+ <h2>Before Booking</h2>
+ <div class="faq">
+  <h3>What are your working hours?</h3>
+  <p>12:00 PM to 9:00 PM, all seven days.</p>
+ </div>
+ <div class="faq">
+  <h3>How is my booking confirmed?</h3>
+  <p>Your appointment is final only after confirmation on WhatsApp.</p>
+ </div>
+ <div class="faq">
+  <h3>Can I cancel my booking?</h3>
+  <p>Free cancellation is available up to two hours before your appointment.</p>
+ </div>
+ <div class="faq">
+  <h3>How can I pay?</h3>
+  <p>Cash or UPI after the service is completed.</p>
+ </div>
+</section>
+
+<section id="contact">
+ <h2>Ready to Book?</h2>
+ <p class="subtitle">Contact Relax Vibe on WhatsApp.</p>
+ <a class="btn" href="https://wa.me/919507197094" target="_blank" rel="noopener">Chat on WhatsApp</a>
+</section>
+
+<footer>
+ <img src="logo.png" alt="Relax Vibe" style="width:75px">
+ <p><strong style="color:#d6b66b">RELAX VIBE</strong></p>
+ <p>At-Home Wellness & Massage Services</p>
+ <p>Ranchi, Jharkhand</p>
+ <p>12 PM – 9 PM | All 7 Days</p>
+ <p>WhatsApp: 9507197094</p>
+ <p>Free cancellation up to 2 hours before appointment.</p>
+ <p>© 2026 Relax Vibe. All Rights Reserved.</p>
+</footer>
+
+<div class="modal" id="bookingModal">
+ <div class="modal-box">
+  <span class="close" onclick="closeBooking()">&times;</span>
+  <h2>Book Appointment</h2>
+  <form id="bookingForm">
+   <label>Full Name</label>
+   <input id="customerName" required placeholder="Your name">
+   <label>Mobile Number</label>
+   <input id="phone" type="tel" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+   <label>Select Service</label>
+   <select id="service" required>
+    <option value="">Choose service</option>
+    <option>Relaxing Full Body Massage</option>
+    <option>Normal Body Massage</option>
+   </select>
+   <label>Duration</label>
+   <select id="duration" required>
+    <option value="">Choose duration</option>
+    <option value="60 Minutes">60 Minutes – ₹799</option>
+    <option value="90 Minutes">90 Minutes – ₹999</option>
+    <option value="120 Minutes">120 Minutes – ₹1499</option>
+   </select>
+   <label>Booking Date</label>
+   <input id="date" type="date" required>
+   <label>Preferred Time</label>
+   <input id="time" type="time" min="12:00" max="21:00" required>
+   <label>Full Address in Ranchi</label>
+   <textarea id="address" required placeholder="Your complete address"></textarea>
+   <label>Additional Requirements (Optional)</label>
+   <textarea id="extra" placeholder="Any wellness preferences?"></textarea>
+   <div class="policy">
+    <label><input type="checkbox" id="cancelPolicy" required style="width:auto">
+    I accept the cancellation policy: free cancellation up to 2 hours before appointment.</label>
+   </div>
+   <button class="btn" type="submit" style="width:100%">Continue to WhatsApp</button>
+  </form>
+ </div>
+</div>
+
+<script>
+function openBooking(service){
+ document.getElementById('bookingModal').style.display='block';
+ if(service) document.getElementById('service').value=service;
+}
+function closeBooking(){
+ document.getElementById('bookingModal').style.display='none';
+}
+document.getElementById('date').min=new Date().toLocaleDateString('en-CA');
+
+document.getElementById('bookingForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const name=document.getElementById('customerName').value.trim();
+ const phone=document.getElementById('phone').value.trim();
+ const service=document.getElementById('service').value;
+ const duration=document.getElementById('duration').value;
+ const date=document.getElementById('date').value;
+ const time=document.getElementById('time').value;
+ const address=document.getElementById('address').value.trim();
+ const extra=document.getElementById('extra').value.trim();
+
+ const message=`Hello Relax Vibe! I would like to request an appointment.
+
+Name: ${name}
+Phone: ${phone}
+Service: ${service}
+Duration: ${duration}
+Date: ${date}
+Preferred Time: ${time}
+Address: ${address}
+Additional Requirements: ${extra || 'None'}
+
+Please confirm availability.`;
+
+ window.open('https://wa.me/919507197094?text='+encodeURIComponent(message),'_blank');
+});
+window.onclick=function(e){
+ if(e.target===document.getElementById('bookingModal')) closeBooking();
+};
+</script>
+</body>
+</html>
 
